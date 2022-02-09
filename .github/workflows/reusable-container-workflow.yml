@@ -2,10 +2,6 @@ name: Reusable container workflow
 
 on:
   workflow_call:
-    inputs:
-      language:
-        required: true
-        type: string
 
 jobs:
   trivy-repo:
