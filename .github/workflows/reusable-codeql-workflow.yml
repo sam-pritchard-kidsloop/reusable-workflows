@@ -1,4 +1,4 @@
-name: Reusable workflow example
+name: Reusable codeql workflow
 
 on:
   workflow_call:
