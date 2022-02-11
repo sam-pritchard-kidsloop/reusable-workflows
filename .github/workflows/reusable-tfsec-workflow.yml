@@ -2,10 +2,10 @@ name: Reusable tfsec workflow
 
 on:
   workflow_call:
-    inputs:
-      terraform-path:
-        required: true
-        type: string
+#     inputs:
+#       terraform-path:
+#         required: true
+#         type: string
 
 jobs:
   tfsec:
@@ -19,7 +19,8 @@ jobs:
       - name: tfsec
         uses: tfsec/tfsec-sarif-action@master
         with:
-          working_directory: ${{ inputs.terraform-path }}
+          working_directory: terraform/aws
+#           working_directory: ${{ inputs.terraform-path }}
           sarif_file: tfsec.sarif         
 
       - name: Upload SARIF file
